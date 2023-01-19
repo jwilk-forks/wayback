@@ -65,7 +65,7 @@ However, the cdx server is freely available with the rest of the open-source way
 
 Further documentation will focus on configuration and deployment in other environments.
 
-Please contant us at wwm@archive.org for additional questions.
+Please contact us at wwm@archive.org for additional questions.
 
 
 ### Basic Usage ###
@@ -84,7 +84,7 @@ At this time, the following cdx fields are publicly available:
   
 It is possible to customize the [Field Order](#field-order) as well.
 
-The the **url=** value should be [url encoded](http://en.wikipedia.org/wiki/Percent-encoding) if the url itself contains a query.
+The **url=** value should be [url encoded](http://en.wikipedia.org/wiki/Percent-encoding) if the url itself contains a query.
 
 All other params are optional and are explained below.
 
@@ -202,7 +202,7 @@ To use collapsing, add one or more **collapse=field** or **collapse=field:N** wh
 
 ### Query Result Limits ###
 
-  As the CDX server may return millions or billions of record, it is often necessary to set limits on a single query for practical reasons.
+  As the CDX server may return millions or billions of records, it is often necessary to set limits on a single query for practical reasons.
   The CDX server provides several mechanisms, including ability to return the last N as well as first N results.
 
   * The CDX server config provides a setting for absolute maximum length returned from a single query (currently set to 150000 by default).
@@ -215,7 +215,7 @@ To use collapsing, add one or more **collapse=field** or **collapse=field:N** wh
 
   * *Advanced Option:* **fastLatest=true** may be set to return *some number* of latest results for an exact match and is faster than the standard last results search. The number of results is at least 1 so **limit=-1** implies this setting. The number of results may be greater >1 when a secondary index format (such as ZipNum) is used, but is not guaranteed to return any more than 1 result. Combining this setting with **limit=** will ensure that *no more* than N last results.
 
-    Ex: This query will result in upto 5 of the latest (by date) query results: 
+    Ex: This query will result in up to 5 of the latest (by date) query results: 
 
     http://web.archive.org/cdx/search/cdx?url=archive.org&fastLatest=true&limit=-5
 
@@ -238,7 +238,7 @@ This can be achieved by using **showResumeKey=** and **resumeKey=** params
 
   * To show the resumption key add **showResumeKey=true** param. When set, the resume key will be printed only if the query has more results that have not be printed due to **limit=** (or max query limit) number of results reached.
 
-  * After the end of the query, the *<resumption key>* will be printed on a seperate line or seperate JSON query.
+  * After the end of the query, the *<resumption key>* will be printed on a separate line or separate JSON query.
 
   * Plain text example: http://web.archive.org/cdx/search/cdx?url=archive.org&limit=5&showResumeKey=true
     
@@ -273,7 +273,7 @@ org%2Carchive%29%2F+19980109140106%21
 
 ### Counters ###
 
-There is some work on custom counters to enchance the aggregation capabilities of CDX server.
+There is some work on custom counters to enhance the aggregation capabilities of CDX server.
 These features are brand new and should be considered experimental.
 
 #### Duplicate Counter ####
